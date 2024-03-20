@@ -11,11 +11,9 @@
   </v-container>
 </template>
 <script lang="ts">
-import loginForm from "../components/loginForm.vue";
-import { authStore } from "../store/auth.store";
-import { fieldRequired, requiredAndLength } from "../utilities/rules";
+import { authStore } from "~/store/auth.store";
+import { fieldRequired, requiredAndLength } from "~/utilities/rules";
 export default {
-  components: { loginForm },
   name: "LoginPage",
   setup() {
     const store = authStore();
@@ -37,20 +35,19 @@ export default {
       ],
       arrRegister: [
         {
-          label: "Nombre",
+          label: "Nombre y Apellido",
           value: "",
-        },
-        {
-          label: "Apellido",
-          value: "",
+          type: "text",
         },
         {
           label: "Correo Electrónico",
           value: "",
+          type: "text",
         },
         {
           label: "Contraseña",
           value: "",
+          type: "password",
         },
       ],
     };

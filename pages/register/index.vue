@@ -29,7 +29,7 @@
     </v-sheet>
   </div>
 </template>
-  <script lang="ts">
+<script lang="ts">
 export default {
   name: "LoginPage",
   data() {
